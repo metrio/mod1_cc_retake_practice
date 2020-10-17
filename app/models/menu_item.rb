@@ -16,7 +16,9 @@ class MenuItem
         @@all
     end
 
-    
+    def owner
+        self.restaurant.owner
+    end
 
     def self.most_expensive_item
         self.all.max {|menu_item_a, menu_item_b| menu_item_a.price <=> menu_item_b.price}
